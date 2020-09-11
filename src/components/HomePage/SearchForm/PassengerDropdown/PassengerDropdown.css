@@ -1,0 +1,38 @@
+.passenger-c {
+  position: relative;
+  /* right: 142px; */
+  height: 48px;
+  width: 277px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  background-color: rgba(33, 33, 33, 0);
+  transition: 0.2s ease-in-out;
+  color: #212121;
+}
+.passenger-c:hover {
+  background-color: rgba(33, 33, 33, 0.07);
+}
+
+.passenger-c svg {
+  width: 11.5px;
+  height: 11.5px;
+  border-radius: 20px;
+  transition: 0.2s ease;
+  margin-right: 19px;
+}
+.passenger-c .nr-p {
+  margin-left: 12px;
+}
+.passenger-c > span:nth-child(2) {
+  position: relative;
+  right: 6px;
+  width: 80px;
+  display: inline-block;
+}
+.passenger-c > .type {
+  position: relative;
+  right: 15px;
+  min-width: 68px;
+}

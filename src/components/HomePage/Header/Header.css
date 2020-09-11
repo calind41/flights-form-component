@@ -1,0 +1,99 @@
+.header-c {
+  width: 100%;
+  margin: auto;
+  z-index: 2;
+  height: 80.5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-c .logo {
+  margin-left: 32px;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+.header-c ul {
+  margin-right: 9px;
+}
+.header-c ul {
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+  width: 750px;
+  font-size: 12px;
+}
+.header-c ul li,
+.header-c ul li a {
+  height: 25px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+.header-c ul li:nth-child(1),
+.header-c ul li:nth-child(2) {
+  margin-top: -1.5px;
+}
+.header-c ul .services svg,
+.header-c ul .customer-support svg {
+  margin-left: 8px;
+  margin-top: 2px;
+}
+
+.header-c ul li:nth-child(1) {
+  position: relative;
+  left: 15px;
+}
+.header-c ul li:nth-child(2) {
+  position: relative;
+  right: 3.5px;
+}
+.header-c ul .bonus-pts {
+  position: relative;
+  right: 6px;
+}
+.header-c .services {
+  position: relative;
+  right: 4.9px;
+}
+.header-c .customer-support {
+  position: relative;
+  right: 3.7px;
+}
+.header-c ul .my-booking {
+  position: relative;
+  right: 2.5px;
+}
+.header-c ul .h-btn {
+  width: 136px;
+  position: relative;
+  right: 1px;
+}
+
+.header-c ul .h-btn button {
+  width: 136px;
+  height: 35.5px !important;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.95);
+  height: 37px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 4px;
+  line-height: 20px;
+  padding-top: 2px;
+  transition: background-color 0.2s;
+}
+.header-c ul .h-btn button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.header-c ul li:not(:nth-child(7)):not(:nth-child(8)):hover {
+  opacity: 0.6;
+}
+.header-c .logo:hover {
+  opacity: 0.6;
+}

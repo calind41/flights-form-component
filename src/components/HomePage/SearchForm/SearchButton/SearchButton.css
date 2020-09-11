@@ -1,0 +1,20 @@
+.sbtn-c button {
+  border: 1px solid red;
+  font-size: 15.7px;
+  color: #fff;
+  background-color: #01abfb;
+  border: 1px solid #01abfb;
+  height: 48px;
+  width: 92px;
+  text-align: center;
+  position: absolute;
+  border-radius: 4px;
+  cursor: pointer;
+  right: -100px;
+  transition: all 0.2s;
+  outline: none;
+}
+.sbtn-c button:hover {
+  background-color: #009de6;
+  border: 1px solid #009de6;
+}
