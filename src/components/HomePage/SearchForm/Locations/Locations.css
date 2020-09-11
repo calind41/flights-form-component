@@ -4,7 +4,9 @@
   background-color: rgb(233, 233, 233);
   margin-top: 4px;
   width: 417px;
-  height: 481.5px;
+  min-height: 0;
+  max-height: 481.5px;
+  /* height: 481.5px; */
   overflow-y: auto;
   display: none;
   position: absolute;

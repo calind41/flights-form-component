@@ -13,13 +13,34 @@ export default function PassengerDropdown() {
     setSelectedType(selectedType);
   };
   const handleClick = (evt) => {
-    console.log(evt.target);
+    // hack pentru a nu roti 180grade sageata de sub dropdown
+    let node = evt.target;
+    while (
+      node !== null &&
+      node.classList &&
+      !node.classList.contains("body-className")
+    ) {
+      if (node.classList.contains("dropdown-c")) {
+        return;
+      }
+      node = node.parentElement;
+    }
 
+    // rotate arrow
     let svgEl = document.querySelector(".p-c svg");
     if (svgEl.style.transform == "rotate(180deg)") {
       document.querySelector(".p-c svg").style.transform = "rotate(0deg)";
     } else {
       document.querySelector(".p-c svg").style.transform = "rotate(180deg)";
+    }
+
+    // toggle dropdown
+    let dropdownEl = document.querySelector(".dropdown-c");
+    console.log(dropdownEl.style.display);
+    if (dropdownEl.style.display === "block") {
+      dropdownEl.style.display = "none";
+    } else {
+      dropdownEl.style.display = "block";
     }
   };
   return (

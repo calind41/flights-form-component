@@ -1,39 +1,6 @@
 import React from "react";
 import "./Locations.css";
 
-export default function Locations({ inputType, passInput }) {
-  const handleClick = (loc) => {
-    console.log(loc.acronym);
-    const city = loc.full.props.children[0];
-    const country = loc.full.props.children[1].props.children;
-    let text = city + country;
-
-    passInput(text, loc.acronym);
-
-    if (inputType === "to") {
-      document.querySelector(`.${inputType}`).style.display = "none";
-    } else {
-      document.querySelector(`.${inputType}`).style.display = "none";
-      document.querySelector(".to").style.display = "block";
-    }
-  };
-  return (
-    <div className={`locations-c ${inputType}`}>
-      {locations.map((loc, index) => {
-        return (
-          <div onClick={() => handleClick(loc)} key={index}>
-            <span>{loc.icon}</span>
-            <span className={loc.icon === planeIcon ? "plane-i" : ""}>
-              {loc.full}
-            </span>
-            <span>{loc.acronym}</span>
-          </div>
-        );
-      })}
-    </div>
-  );
-}
-
 const planeIcon = (
   <svg
     className='plane-svg'
@@ -63,140 +30,36 @@ const locationIcon = (
   </svg>
 );
 
-const locations = [
-  {
-    full: (
-      <>
-        Tenerife (all airports), <span>Spain</span>
-      </>
-    ),
-    acronym: "TCI",
-    icon: locationIcon,
-  },
-  {
-    full: (
-      <>
-        New Yodrk (all airports), <span>United States</span>
-      </>
-    ),
-    acronym: "NYC",
-    icon: locationIcon,
-  },
-  {
-    full: (
-      <>
-        New York (all airports), <span>United States</span>
-      </>
-    ),
-    acronym: "NYC",
-    icon: planeIcon,
-  },
-  {
-    full: (
-      <>
-        New York (all airports), <span>United States</span>
-      </>
-    ),
-    acronym: "NYC",
-    icon: locationIcon,
-  },
-  {
-    full: (
-      <>
-        New York (all airports), <span>United States</span>
-      </>
-    ),
-    acronym: "NYC",
-    icon: locationIcon,
-  },
-  {
-    full: (
-      <>
-        New York (all airports), <span>United States</span>
-      </>
-    ),
-    acronym: "NYC",
-    icon: locationIcon,
-  },
-  {
-    full: (
-      <>
-        New York (all airports), <span>United States</span>
-      </>
-    ),
-    acronym: "NYC",
-    icon: locationIcon,
-  },
-  {
-    full: (
-      <>
-        New York (all airports), <span>United States</span>
-      </>
-    ),
-    acronym: "NYC",
-    icon: locationIcon,
-  },
-  {
-    full: (
-      <>
-        New York (all airports), <span>United States</span>
-      </>
-    ),
-    acronym: "NYC",
-    icon: locationIcon,
-  },
-  {
-    full: (
-      <>
-        New York (all airports), <span>United States</span>
-      </>
-    ),
-    acronym: "NYC",
-    icon: locationIcon,
-  },
-  {
-    full: (
-      <>
-        New York (all airports), <span>United States</span>
-      </>
-    ),
-    acronym: "NYC",
-    icon: locationIcon,
-  },
-  {
-    full: (
-      <>
-        New York (all airports), <span>United States</span>
-      </>
-    ),
-    acronym: "NYC",
-    icon: locationIcon,
-  },
-  {
-    full: (
-      <>
-        New York (all airports), <span>United States</span>
-      </>
-    ),
-    acronym: "NYC",
-    icon: locationIcon,
-  },
-  {
-    full: (
-      <>
-        New York (all airports), <span>United States</span>
-      </>
-    ),
-    acronym: "NYC",
-    icon: locationIcon,
-  },
-  {
-    full: (
-      <>
-        New York (all airports), <span>United States</span>
-      </>
-    ),
-    acronym: "NYC",
-    icon: locationIcon,
-  },
-];
+export default function Locations({ locations, inputType, passInput }) {
+  const handleClick = (loc) => {
+    console.log(loc.acronym);
+    const city = loc.full.props.children[0];
+    const country = loc.full.props.children[1].props.children;
+    let text = city + country;
+
+    passInput(text, loc.acronym);
+
+    if (inputType === "to") {
+      document.querySelector(`.${inputType}`).style.display = "none";
+    } else {
+      document.querySelector(`.${inputType}`).style.display = "none";
+      document.querySelector(".to").style.display = "block";
+    }
+  };
+  return (
+    <div className={`locations-c ${inputType}`}>
+      {locations &&
+        locations.map((loc, index) => {
+          return (
+            <div onClick={() => handleClick(loc)} key={index}>
+              <span>{loc.icon}</span>
+              <span className={loc.icon === planeIcon ? "plane-i" : ""}>
+                {loc.full}
+              </span>
+              <span>{loc.acronym}</span>
+            </div>
+          );
+        })}
+    </div>
+  );
+}

@@ -38,7 +38,7 @@ export default function Dropdown({ passNrAdults, passSelectedType }) {
   };
   return (
     <div className='dropdown-c'>
-      <div>
+      <div className='nr-adults-c'>
         <button className={nrAdults === 1 ? "gray-bg" : ""} onClick={decrement}>
           -
         </button>
