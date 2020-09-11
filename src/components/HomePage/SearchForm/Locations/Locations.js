@@ -44,6 +44,7 @@ export default function Locations({ locations, inputType, passInput }) {
     } else {
       document.querySelector(`.${inputType}`).style.display = "none";
       document.querySelector(".to").style.display = "block";
+      document.querySelector(".to-input label input").focus();
     }
   };
   return (
