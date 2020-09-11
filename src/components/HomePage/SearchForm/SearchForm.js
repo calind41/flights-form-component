@@ -13,6 +13,8 @@ export default function SearchForm() {
       if (evt.target.classList.contains("homepage-c")) {
         document.querySelector(".from").style.display = "none";
         document.querySelector(".to").style.display = "none";
+        document.querySelector(".dropdown-c").style.display = "none";
+        document.querySelector(".p-c svg").style.transform = "rotate(0deg)";
       }
     });
   }, []);

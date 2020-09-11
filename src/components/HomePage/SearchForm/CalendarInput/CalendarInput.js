@@ -1,5 +1,6 @@
 import React from "react";
 import "./CalendarInput.css";
+import Calendar from "./Calendar/Calendar";
 
 export default function CalendarInput() {
   const handleClick = () => {
@@ -29,6 +30,7 @@ export default function CalendarInput() {
           <path d='M2.8,0L12,9.2L21.2,0L24,2.8l-12,12L0,2.8L2.8,0z'></path>
         </g>
       </svg>
+      <Calendar />
     </div>
   );
 }

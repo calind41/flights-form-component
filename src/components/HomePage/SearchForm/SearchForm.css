@@ -22,6 +22,7 @@
   padding-right: 7.5px;
   padding-bottom: 14px;
   border-bottom: 8px solid #ffd600;
+  cursor: pointer;
 }
 
 .searchform-c .swap {

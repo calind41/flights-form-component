@@ -1,10 +1,15 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
 import "./Header.css";
 
 export default function Header() {
+  const history = useHistory();
+  const toHome = () => {
+    history.push("/");
+  };
   return (
     <header className='header-c'>
-      <div className='logo'>
+      <div onClick={toHome} className='logo'>
         <svg
           width='40'
           height='40'

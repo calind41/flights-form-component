@@ -1,0 +1,7 @@
+.calendar-c {
+  position: absolute !important;
+  top: 100px;
+  /* width: 100px; */
+  /* height: 300px; */
+  border: 1px solid red;
+}
