@@ -1,0 +1,51 @@
+.month-c {
+  width: 335px;
+  height: 239px;
+}
+.month-c h4 {
+  color: #212121;
+  font-weight: 400;
+  font-size: 14px;
+}
+.grid-container {
+  width: 335px;
+  height: 218px;
+  position: relative;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto;
+  background-color: #fff;
+}
+.grid-item {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #212121;
+  cursor: pointer;
+  margin: 5px;
+}
+.grid-item:hover {
+  background-color: #fff2bb;
+  border-radius: 4px;
+}
+.grid-item-empty:hover {
+  background-color: #fff;
+  cursor: default;
+}
+.color-gray {
+  color: #cccccc;
+  cursor: default;
+}
+.color-gray:hover {
+  background-color: #fff !important;
+  border-radius: 4px;
+}
+
+.selected-date {
+  background-color: #ffd41e !important;
+  border-radius: 4px;
+}
+.hovered-date {
+  background-color: #fff2bb;
+  border-radius: 4px;
+}

@@ -15,6 +15,9 @@ export default function SearchForm() {
         document.querySelector(".to").style.display = "none";
         document.querySelector(".dropdown-c").style.display = "none";
         document.querySelector(".p-c svg").style.transform = "rotate(0deg)";
+        document.querySelector(".wrapper").style.display = "none";
+        document.querySelector(".departing-c svg").style.transform =
+          "rotate(0deg)";
       }
     });
   }, []);

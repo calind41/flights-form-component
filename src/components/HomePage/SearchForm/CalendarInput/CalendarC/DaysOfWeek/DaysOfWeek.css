@@ -1,0 +1,17 @@
+.days-of-week {
+  position: absolute;
+  color: #fff;
+  width: 371px;
+  top: 75px;
+  right: 1px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.days-of-week > div {
+  width: 24px;
+  color: #888888;
+  font-size: 12px;
+}
+.weekend-days {
+  font-weight: bold;
+}
